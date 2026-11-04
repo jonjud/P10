@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d4ks1fjcug331"]
+
+[ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_mb7tx"]
+[ext_resource type="Script" uid="uid://wluy6hnm1xdj" path="res://systems/item_data.gd" id="2_d7xks"]
+
+[resource]
+script = ExtResource("2_d7xks")
+id = &"ingot_00"
+display_name = "Iron Ingot"
+description = "Iron Ingot from Iron ore."
+item_type = 0
+material_form = 2
+tags = Array[StringName]([&"tier2"])
+value = 10
+metadata/_custom_type_script = "uid://wluy6hnm1xdj"

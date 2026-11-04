@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_dnu3u"]
 [ext_resource type="Script" uid="uid://wluy6hnm1xdj" path="res://systems/item_data.gd" id="2_uetb7"]
 
+[sub_resource type="Resource" id="Resource_bcocn"]
+script = ExtResource("1_dnu3u")
+item_id = &"plank_00"
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
 [resource]
 script = ExtResource("2_uetb7")
 id = &"wooden_sword_00"
@@ -10,4 +15,9 @@ display_name = "Wooden Sword"
 description = "A wooden Sword..."
 max_stack = 1
 item_type = 2
+material_form = 4
+value = 14
+can_be_salvaged = true
+salvage_yield = Array[ExtResource("1_dnu3u")]([SubResource("Resource_bcocn")])
+salvage_station = &"workbench_00"
 metadata/_custom_type_script = "uid://wluy6hnm1xdj"

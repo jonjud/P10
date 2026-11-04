@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://bmcv1oi5rs26h"]
+
+[ext_resource type="Script" uid="uid://bfdaisj1r22uf" path="res://systems/recipe_ingredient.gd" id="1_cc6qr"]
+[ext_resource type="Script" uid="uid://qehnoxnjphsx" path="res://systems/recipe_output.gd" id="2_b0ge2"]
+[ext_resource type="Script" uid="uid://dwn5nqlx00kt0" path="res://systems/crafting_recipe.gd" id="3_ik4x3"]
+
+[sub_resource type="Resource" id="Resource_muuma"]
+script = ExtResource("1_cc6qr")
+item_id = &"plank_00"
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_h2p5e"]
+script = ExtResource("1_cc6qr")
+item_id = &"fiber_00"
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_u1fb5"]
+script = ExtResource("2_b0ge2")
+item_id = &"wood_handle_00"
+metadata/_custom_type_script = "uid://qehnoxnjphsx"
+
+[resource]
+script = ExtResource("3_ik4x3")
+id = &"r_handle"
+display_name = "Handle Recipe"
+inputs = Array[ExtResource("1_cc6qr")]([SubResource("Resource_muuma"), SubResource("Resource_h2p5e")])
+outputs = Array[ExtResource("2_b0ge2")]([SubResource("Resource_u1fb5")])
+station_required = &"workbench_00"
+metadata/_custom_type_script = "uid://dwn5nqlx00kt0"

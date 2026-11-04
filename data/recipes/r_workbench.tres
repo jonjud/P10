@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://cgkg40nrlvlk3"]
+
+[ext_resource type="Script" uid="uid://bfdaisj1r22uf" path="res://systems/recipe_ingredient.gd" id="1_eww6u"]
+[ext_resource type="Script" uid="uid://qehnoxnjphsx" path="res://systems/recipe_output.gd" id="2_fjkb8"]
+[ext_resource type="Script" uid="uid://dwn5nqlx00kt0" path="res://systems/crafting_recipe.gd" id="3_4gldp"]
+
+[sub_resource type="Resource" id="Resource_0esra"]
+script = ExtResource("1_eww6u")
+item_id = &"wood_00"
+quantity = 6
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_3e6nt"]
+script = ExtResource("1_eww6u")
+item_id = &"stone_00"
+quantity = 2
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_4wt0j"]
+script = ExtResource("2_fjkb8")
+item_id = &"workbench_00"
+metadata/_custom_type_script = "uid://qehnoxnjphsx"
+
+[resource]
+script = ExtResource("3_4gldp")
+id = &"r_workbench"
+display_name = "Workbench Recipe"
+inputs = Array[ExtResource("1_eww6u")]([SubResource("Resource_0esra"), SubResource("Resource_3e6nt")])
+outputs = Array[ExtResource("2_fjkb8")]([SubResource("Resource_4wt0j")])
+metadata/_custom_type_script = "uid://dwn5nqlx00kt0"

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://cnvqfeiw1kxuq"]
+
+[ext_resource type="Script" uid="uid://bfdaisj1r22uf" path="res://systems/recipe_ingredient.gd" id="1_q3kby"]
+[ext_resource type="Script" uid="uid://qehnoxnjphsx" path="res://systems/recipe_output.gd" id="2_neffv"]
+[ext_resource type="Script" uid="uid://dwn5nqlx00kt0" path="res://systems/crafting_recipe.gd" id="3_ls42r"]
+
+[sub_resource type="Resource" id="Resource_y7ke8"]
+script = ExtResource("1_q3kby")
+item_id = &"plank_00"
+quantity = 4
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_yv1st"]
+script = ExtResource("1_q3kby")
+item_id = &"stone_00"
+quantity = 2
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_lhvhp"]
+script = ExtResource("2_neffv")
+item_id = &"chest_00"
+metadata/_custom_type_script = "uid://qehnoxnjphsx"
+
+[resource]
+script = ExtResource("3_ls42r")
+id = &"r_chest"
+display_name = "Basic Chest Recipe"
+inputs = Array[ExtResource("1_q3kby")]([SubResource("Resource_y7ke8"), SubResource("Resource_yv1st")])
+outputs = Array[ExtResource("2_neffv")]([SubResource("Resource_lhvhp")])
+station_required = &"workbench_00"
+metadata/_custom_type_script = "uid://dwn5nqlx00kt0"

@@ -9,4 +9,7 @@ can_be_rotated = false
 id = &"floor_00"
 display_name = "Basic Floor"
 item_type = 6
+material_form = 4
+tags = Array[StringName]([&"tier1"])
+value = 4
 metadata/_custom_type_script = "uid://dywd30cufdk0u"

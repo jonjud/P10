@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://d3oiokck1wpmv"]
 
+[ext_resource type="Script" uid="uid://bgl43xnkabiui" path="res://scenes/p10_main.gd" id="1_bcocn"]
+
 [node name="P10Main" type="Node2D" unique_id=1155152917]
+script = ExtResource("1_bcocn")

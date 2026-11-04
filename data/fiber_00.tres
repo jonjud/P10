@@ -10,4 +10,6 @@ display_name = "Basic Fiber"
 description = "The most basic fiber from plants."
 item_type = 0
 material_form = 1
+tags = Array[StringName]([&"tier0"])
+value = 1
 metadata/_custom_type_script = "uid://wluy6hnm1xdj"

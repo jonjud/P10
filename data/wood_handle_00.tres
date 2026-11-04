@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cqgj2w7c2yr8m"]
+
+[ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_i4jgh"]
+[ext_resource type="Script" uid="uid://wluy6hnm1xdj" path="res://systems/item_data.gd" id="2_025rc"]
+
+[resource]
+script = ExtResource("2_025rc")
+id = &"wood_handle_00"
+display_name = "Wood Handle"
+description = "A handle made of wood"
+item_type = 0
+material_form = 3
+tags = Array[StringName]([&"tier1"])
+value = 5
+metadata/_custom_type_script = "uid://wluy6hnm1xdj"

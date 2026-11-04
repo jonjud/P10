@@ -49,3 +49,27 @@ static func craft(db : ItemDatabase, inv : Inventory, recipe : CraftingRecipe, s
 			push_error("Crafter.craft: dry-run ผ่านแต่ add ล้ม")
 			return CraftResult.make(CraftResult.INTERNAL, qty, 0)
 	return CraftResult.make(CraftResult.OK, qty, qty)
+
+static func explain(db : ItemDatabase, inv : Inventory, recipe : CraftingRecipe, stations : Array, qty : int = 1) -> Dictionary:
+	var out : Dictionary = {"ok": false, "reason": CraftResult.OK, "missing": {}, "station": &""}
+	if db == null or inv == null or recipe == null or qty <= 0:
+		out["reason"] = CraftResult.UNKNOWN_RECIPE if recipe == null else CraftResult.INVALID_QUANTITY
+		return out
+	var st : StringName = recipe.station_required if recipe.station_required != &"" else &"hand"
+	out["station"] = st
+	if st != &"hand" and not stations.has(st):
+		out["reason"] = CraftResult.WRONG_STATION
+	var need : Dictionary = {}
+	for i in recipe.inputs:
+		if i == null or i.quantity <= 0:
+			out["reason"] = CraftResult.BAD_RECIPE
+			return out
+		need[i.item_id] = need.get(i.item_id, 0) + i.quantity * qty
+	for id in need:
+		var lack : int = need[id] - inv.count_of(id)
+		if lack > 0:
+			out["missing"][id] = lack
+	if out["reason"] == CraftResult.OK and not out["missing"].is_empty():
+		out["reason"] = CraftResult.NOT_ENOUGH
+	out["ok"] = out["reason"] == CraftResult.OK
+	return out

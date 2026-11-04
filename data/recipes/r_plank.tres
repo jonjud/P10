@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://dydk81pjdmss8"]
+
+[ext_resource type="Script" uid="uid://bfdaisj1r22uf" path="res://systems/recipe_ingredient.gd" id="1_bv430"]
+[ext_resource type="Script" uid="uid://qehnoxnjphsx" path="res://systems/recipe_output.gd" id="2_15cm7"]
+[ext_resource type="Script" uid="uid://dwn5nqlx00kt0" path="res://systems/crafting_recipe.gd" id="3_yykxq"]
+
+[sub_resource type="Resource" id="Resource_7gb03"]
+script = ExtResource("1_bv430")
+item_id = &"wood_00"
+quantity = 2
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_x7utw"]
+script = ExtResource("2_15cm7")
+item_id = &"plank_00"
+quantity = 2
+metadata/_custom_type_script = "uid://qehnoxnjphsx"
+
+[resource]
+script = ExtResource("3_yykxq")
+id = &"r_plank"
+display_name = "Plank Recipe"
+inputs = Array[ExtResource("1_bv430")]([SubResource("Resource_7gb03")])
+outputs = Array[ExtResource("2_15cm7")]([SubResource("Resource_x7utw")])
+station_required = &"workbench_00"
+metadata/_custom_type_script = "uid://dwn5nqlx00kt0"

@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_rtxn3"]
 [ext_resource type="Script" uid="uid://dywd30cufdk0u" path="res://systems/building_piece_data.gd" id="2_k1t04"]
 
+[sub_resource type="Resource" id="Resource_r0mgv"]
+script = ExtResource("1_rtxn3")
+item_id = &"plank_00"
+min_quantity = 2
+max_quantity = 2
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
+[sub_resource type="Resource" id="Resource_e7mqd"]
+script = ExtResource("1_rtxn3")
+item_id = &"stone_00"
+is_bonus = true
+chance = 0.5
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
 [resource]
 script = ExtResource("2_k1t04")
 can_be_rotated = false
@@ -10,4 +24,10 @@ category = 3
 id = &"chest_00"
 display_name = "Wooden Chest"
 item_type = 6
+material_form = 4
+tags = Array[StringName]([&"tier1"])
+value = 20
+can_be_salvaged = true
+salvage_yield = Array[ExtResource("1_rtxn3")]([SubResource("Resource_r0mgv"), SubResource("Resource_e7mqd")])
+salvage_station = &"workbench_00"
 metadata/_custom_type_script = "uid://dywd30cufdk0u"

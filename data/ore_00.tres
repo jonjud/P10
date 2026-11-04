@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cv0qadsgeiee8"]
+
+[ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_y4qcv"]
+[ext_resource type="Script" uid="uid://wluy6hnm1xdj" path="res://systems/item_data.gd" id="2_xcd14"]
+
+[resource]
+script = ExtResource("2_xcd14")
+id = &"ore_00"
+display_name = "Iron Ore"
+description = "Ore for Iron vein"
+item_type = 0
+material_form = 1
+tags = Array[StringName]([&"tier2"])
+value = 4
+can_be_salvaged = false
+metadata/_custom_type_script = "uid://wluy6hnm1xdj"

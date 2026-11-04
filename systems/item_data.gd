@@ -15,6 +15,6 @@ enum Rarity { COMMON } # ค่าอื่นยัง OPEN (OQ-04-03)
 @export var tags: Array[StringName] = []# tier1, wood, salvageable, furniture ฯลฯ
 @export var rarity: Rarity = Rarity.COMMON
 @export var value: int = 0                   # base economic value
-@export var can_be_salvaged: bool = true
+@export var can_be_salvaged: bool = false
 @export var salvage_yield: Array[SalvageEntry] = []
 @export var salvage_station: StringName = &"any"

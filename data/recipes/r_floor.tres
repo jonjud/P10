@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://cylx1et0kpmfr"]
+
+[ext_resource type="Script" uid="uid://bfdaisj1r22uf" path="res://systems/recipe_ingredient.gd" id="1_5efek"]
+[ext_resource type="Script" uid="uid://qehnoxnjphsx" path="res://systems/recipe_output.gd" id="2_sf4o3"]
+[ext_resource type="Script" uid="uid://dwn5nqlx00kt0" path="res://systems/crafting_recipe.gd" id="3_spos4"]
+
+[sub_resource type="Resource" id="Resource_bgb3y"]
+script = ExtResource("1_5efek")
+item_id = &"plank_00"
+metadata/_custom_type_script = "uid://bfdaisj1r22uf"
+
+[sub_resource type="Resource" id="Resource_airpn"]
+script = ExtResource("2_sf4o3")
+item_id = &"floor_00"
+metadata/_custom_type_script = "uid://qehnoxnjphsx"
+
+[resource]
+script = ExtResource("3_spos4")
+id = &"r_floor"
+display_name = "Basic Floor Recipe"
+inputs = Array[ExtResource("1_5efek")]([SubResource("Resource_bgb3y")])
+outputs = Array[ExtResource("2_sf4o3")]([SubResource("Resource_airpn")])
+station_required = &"workbench_00"
+metadata/_custom_type_script = "uid://dwn5nqlx00kt0"

@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_k30m2"]
 [ext_resource type="Script" uid="uid://dywd30cufdk0u" path="res://systems/building_piece_data.gd" id="2_0xfao"]
 
+[sub_resource type="Resource" id="Resource_7hfme"]
+script = ExtResource("1_k30m2")
+item_id = &"plank_00"
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
 [resource]
 script = ExtResource("2_0xfao")
 can_be_rotated = false
@@ -10,4 +15,10 @@ category = 1
 id = &"wall_00"
 display_name = "Basic Wall"
 item_type = 6
+material_form = 4
+tags = Array[StringName]([&"tier1"])
+value = 8
+can_be_salvaged = true
+salvage_yield = Array[ExtResource("1_k30m2")]([SubResource("Resource_7hfme")])
+salvage_station = &"workbench_00"
 metadata/_custom_type_script = "uid://dywd30cufdk0u"

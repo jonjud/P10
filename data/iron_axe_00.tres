@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c48bh57e8juey"]
+
+[ext_resource type="Script" uid="uid://bpgaer11x0u3d" path="res://systems/salvage_entry.gd" id="1_7hfme"]
+[ext_resource type="Script" uid="uid://wluy6hnm1xdj" path="res://systems/item_data.gd" id="2_r0mgv"]
+
+[sub_resource type="Resource" id="Resource_jtnrm"]
+script = ExtResource("1_7hfme")
+item_id = &"ingot_00"
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
+[sub_resource type="Resource" id="Resource_1v8rk"]
+script = ExtResource("1_7hfme")
+item_id = &"wood_handle_00"
+metadata/_custom_type_script = "uid://bpgaer11x0u3d"
+
+[resource]
+script = ExtResource("2_r0mgv")
+id = &"iron_axe_00"
+display_name = "Iron Axe"
+description = "A tool for cutting"
+max_stack = 1
+item_type = 1
+material_form = 4
+can_be_salvaged = true
+salvage_yield = Array[ExtResource("1_7hfme")]([SubResource("Resource_jtnrm"), SubResource("Resource_1v8rk")])
+salvage_station = &"workbench_00"
+metadata/_custom_type_script = "uid://wluy6hnm1xdj"
